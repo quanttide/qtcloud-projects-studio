@@ -5,20 +5,30 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 
 /// 项目集节点
-@Freezed()
+///
+/// TODO: 使用freezed改造
+// @Freezed()
 class ProgramNode extends Node {
-  ProgramNode(super.data);
+  /// 项目集ID
+  String id;
+  /// 项目集标题
+  String title;
+  /// 项目集描述
+  String? description;
+
+  ProgramNode({
+    required this.id,
+    required this.title,
+    this.description
+  }) : super.Id(id);
 }
 
 
 /// 项目集图
-@Freezed()
+///
+/// TODO: 使用Freezed改造
+///
+// @Freezed()
 class ProgramGraph extends Graph {
   ProgramGraph();
-
-  /// 从原始API导入数据
-  /// TODO：设计领域模型和API以后决定入参格式。
-  fromJson(){
-
-  }
 }
