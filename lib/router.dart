@@ -5,13 +5,14 @@ import 'package:go_router/go_router.dart';
 
 import 'screens/program.dart';
 import 'screens/project.dart';
+import 'screens/issue.dart';
 
 
 final GoRouter router = GoRouter(
   routes: <GoRoute>[
     // 项目集页面
     GoRoute(
-      name: 'programs',
+      name: 'program',
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
         return const ProgramScreen();
@@ -19,12 +20,19 @@ final GoRouter router = GoRouter(
     ),
     // 项目页面
     GoRoute(
-      name: 'projects',
+      name: 'project',
       path: '/projects',
       builder: (BuildContext context, GoRouterState state) {
         return const ProjectScreen();
       }
+    ),
+    // 议题页面
+    GoRoute(
+      name: 'issue',
+      path: '/issues',
+      builder: (BuildContext context, GoRouterState state){
+        return const IssueScreen();
+      }
     )
-
   ]
 );
