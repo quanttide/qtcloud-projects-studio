@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import 'screens/program.dart';
 import 'screens/project.dart';
+import 'screens/issue_list.dart';
 import 'screens/issue.dart';
 
 
@@ -26,6 +27,16 @@ final GoRouter router = GoRouter(
         return const ProjectScreen();
       }
     ),
+    // 议题列表页面
+    /*
+    GoRoute(
+      name: 'issue-list',
+      path: '/issues',
+      builder: (BuildContext context, GoRouterState state){
+        return const IssueListScreen();
+      }
+    ),
+     */
     // 议题页面
     GoRoute(
       name: 'issue',

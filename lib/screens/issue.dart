@@ -9,15 +9,27 @@ class IssueScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController controller = TextEditingController();
-    return const Scaffold(
-        body: Column(
-          children: [
-            Text('标题'),
-            IssueContent(title: '内容'),
-            IssueContent(title: '结论'),
-          ]
-        )
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('标题'),
+      ),
+      body: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Flexible(
+            flex: 1,
+            child: IssueContent(
+                title: '内容'
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: IssueContent(
+                title: '结论'
+            ),
+          )
+        ]
+      )
     );
   }
 }
@@ -34,15 +46,24 @@ class IssueContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
-    return Column(
-        children: [
-          Text(title),
-          MarkdownAutoPreview(
-            // editable text with toolbar by default
-            controller: controller,
-            emojiConvert: true,
-          ),
-        ]
+    return Card(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              flex: 1,
+              child: Text(title),
+            ),
+            Flexible(
+              flex: 3,
+              child: MarkdownAutoPreview(
+                // editable text with toolbar by default
+                controller: controller,
+                emojiConvert: true,
+              ),
+            ),
+          ]
+      ),
     );
   }
 }
