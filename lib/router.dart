@@ -11,6 +11,7 @@ import 'screens/issue.dart';
 
 final GoRouter router = GoRouter(
   routes: <GoRoute>[
+    /*
     // 项目集页面
     GoRoute(
       name: 'program',
@@ -19,6 +20,7 @@ final GoRouter router = GoRouter(
         return const ProgramScreen();
       },
     ),
+     */
     // 项目页面
     GoRoute(
       name: 'project',

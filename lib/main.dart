@@ -23,7 +23,7 @@ class QtCloudProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       /// APP标题
-      title: '量潮项目管理云',
+      title: '量潮项目管理',
       /// APP主题
       theme: defaultThemeData,
       /// 路由

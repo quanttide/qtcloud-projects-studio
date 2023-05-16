@@ -10,5 +10,5 @@ final ThemeData defaultThemeData = ThemeData(
   /// 默认字体
   fontFamily: 'Roboto',
   /// Material 3开关
-  // useMaterial3: true,
+  useMaterial3: true,
 );
