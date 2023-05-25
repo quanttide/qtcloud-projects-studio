@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'screens/home.dart';
 import 'screens/program.dart';
 import 'screens/project.dart';
 import 'screens/issue_list.dart';
@@ -11,16 +12,16 @@ import 'screens/issue.dart';
 
 final GoRouter router = GoRouter(
   routes: <GoRoute>[
-    /*
-    // 项目集页面
+
+    // 首页
     GoRoute(
-      name: 'program',
+      name: 'home',
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const ProgramScreen();
+        return const HomeScreen();
       },
     ),
-     */
+
     // 项目页面
     GoRoute(
       name: 'project',
